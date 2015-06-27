@@ -57,13 +57,6 @@ using System.Runtime.InteropServices;
 //   (*) Delay Signing is an advanced option - see the Microsoft .NET Framework
 //       documentation for more information on this.
 //
-[assembly: AssemblyDelaySign(false)]
-#if STRONG_NAME
-[assembly: AssemblyKeyFile(@"../BouncyCastle.snk")]
-#else
-[assembly: AssemblyKeyFile("")]
-#endif
-[assembly: AssemblyKeyName("")]
 
 [assembly: CLSCompliant(true)]
 #if !PCL
