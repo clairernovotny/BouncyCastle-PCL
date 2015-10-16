@@ -48,11 +48,11 @@ namespace Org.BouncyCastle.Crypto.Agreement.Jpake
          * @throws InvalidOperationException if any of the above validations fail
          */
         public JPAKEPrimeOrderGroup(BigInteger p, BigInteger q, BigInteger g)
+            : this(p, q, g, false)
         {
             /*
              * Don't skip the checks on user-specified groups.
              */
-            this(p, q, g, false);
         }
 
         /**

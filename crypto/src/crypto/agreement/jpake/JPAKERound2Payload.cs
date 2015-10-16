@@ -3,7 +3,7 @@
 using Org.BouncyCastle.Math;
 using Org.BouncyCastle.Utilities;
 
-namespace SDK.Utils.J_PAKE
+namespace Org.BouncyCastle.Crypto.Agreement.Jpake
 {
     /// <summary>
     /// The payload sent/received during the second round of a J-PAKE exchange.
