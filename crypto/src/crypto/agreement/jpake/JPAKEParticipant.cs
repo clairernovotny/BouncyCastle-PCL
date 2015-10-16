@@ -201,7 +201,7 @@ namespace Org.BouncyCastle.Crypto.Agreement.Jpake
             JPAKEUtil.ValidateNotNull(password, "password");
             JPAKEUtil.ValidateNotNull(group, "p");
             JPAKEUtil.ValidateNotNull(digest, "digest");
-            JPAKEUtil.ValidateNotNull(participantId, "participantId");
+            JPAKEUtil.ValidateNotNull(random, "random");
 
             if (password.Length == 0)
             {
