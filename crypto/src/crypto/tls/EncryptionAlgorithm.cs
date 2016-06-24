@@ -56,14 +56,15 @@ namespace Org.BouncyCastle.Crypto.Tls
         public const int CAMELLIA_256_GCM = 20;
 
         /*
-         * draft-josefsson-salsa20-tls-04 
+         * draft-ietf-tls-chacha20-poly1305-04
          */
-        public const int ESTREAM_SALSA20 = 100;
-        public const int SALSA20 = 101;
+        public const int CHACHA20_POLY1305 = 102;
+        [Obsolete] public const int AEAD_CHACHA20_POLY1305 = CHACHA20_POLY1305;
 
         /*
-         * draft-agl-tls-chacha20poly1305-04
+         * draft-zauner-tls-aes-ocb-04
          */
-        public const int AEAD_CHACHA20_POLY1305 = 102;
+        public const int AES_128_OCB_TAGLEN96 = 103;
+        public const int AES_256_OCB_TAGLEN96 = 104;
     }
 }

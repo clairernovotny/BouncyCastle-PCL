@@ -1,7 +1,8 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == 'Any CPU' ">AnyCPU</Platform>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
@@ -632,6 +633,9 @@
     <Compile Include="src\crypto\digests\NonMemoableDigest.cs" />
     <Compile Include="src\crypto\engines\SerpentEngineBase.cs" />
     <Compile Include="src\crypto\engines\TnepresEngine.cs" />
+    <Compile Include="src\crypto\generators\BCrypt.cs" />
+    <Compile Include="src\crypto\generators\HKDFBytesGenerator.cs" />
+    <Compile Include="src\crypto\generators\OpenBsdBCrypt.cs" />
     <Compile Include="src\crypto\IAsymmetricBlockCipher.cs" />
     <Compile Include="src\crypto\IAsymmetricCipherKeyPairGenerator.cs" />
     <Compile Include="src\crypto\IBasicAgreement.cs" />
@@ -660,6 +664,7 @@
     <Compile Include="src\crypto\KeyGenerationParameters.cs" />
     <Compile Include="src\crypto\MaxBytesExceededException.cs" />
     <Compile Include="src\crypto\OutputLengthException.cs" />
+    <Compile Include="src\crypto\parameters\HKDFParameters.cs" />
     <Compile Include="src\crypto\PbeParametersGenerator.cs" />
     <Compile Include="src\crypto\prng\BasicEntropySourceProvider.cs" />
     <Compile Include="src\crypto\prng\CryptoApiEntropySourceProvider.cs" />
@@ -740,6 +745,7 @@
     <Compile Include="src\crypto\engines\Cast5Engine.cs" />
     <Compile Include="src\crypto\engines\Cast6Engine.cs" />
     <Compile Include="src\crypto\engines\ChaChaEngine.cs" />
+    <Compile Include="src\crypto\engines\ChaCha7539Engine.cs" />
     <Compile Include="src\crypto\engines\DesEdeEngine.cs" />
     <Compile Include="src\crypto\engines\DesEdeWrapEngine.cs" />
     <Compile Include="src\crypto\engines\DesEngine.cs" />
@@ -952,6 +958,7 @@
     <Compile Include="src\crypto\tls\CertificateStatus.cs" />
     <Compile Include="src\crypto\tls\CertificateStatusRequest.cs" />
     <Compile Include="src\crypto\tls\CertificateStatusType.cs" />
+    <Compile Include="src\crypto\tls\CertificateType.cs" />
     <Compile Include="src\crypto\tls\CertificateUrl.cs" />
     <Compile Include="src\crypto\tls\Chacha20Poly1305.cs" />
     <Compile Include="src\crypto\tls\ChangeCipherSpec.cs" />
@@ -1440,6 +1447,7 @@
     <Compile Include="src\util\io\pem\PemReader.cs" />
     <Compile Include="src\util\io\pem\PemWriter.cs" />
     <Compile Include="src\util\net\IPAddress.cs" />
+    <Compile Include="src\util\TypeExtensions.cs" />
     <Compile Include="src\util\zlib\Adler32.cs" />
     <Compile Include="src\util\zlib\Deflate.cs" />
     <Compile Include="src\util\zlib\InfBlocks.cs" />

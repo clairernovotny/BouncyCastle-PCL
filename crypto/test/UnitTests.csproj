@@ -155,6 +155,7 @@
     <Compile Include="src\crypto\test\AESTest.cs" />
     <Compile Include="src\crypto\test\AESWrapTest.cs" />
     <Compile Include="src\crypto\test\AllTests.cs" />
+    <Compile Include="src\crypto\test\BCryptTest.cs" />
     <Compile Include="src\crypto\test\BlockCipherMonteCarloTest.cs" />
     <Compile Include="src\crypto\test\BlockCipherVectorTest.cs" />
     <Compile Include="src\crypto\test\BlowfishTest.cs" />
@@ -192,6 +193,7 @@
     <Compile Include="src\crypto\test\GcmReorderTest.cs" />
     <Compile Include="src\crypto\test\HCFamilyTest.cs" />
     <Compile Include="src\crypto\test\HCFamilyVecTest.cs" />
+    <Compile Include="src\crypto\test\HKDFGeneratorTest.cs" />
     <Compile Include="src\crypto\test\IDEATest.cs" />
     <Compile Include="src\crypto\test\ISAACTest.cs" />
     <Compile Include="src\crypto\test\ISO9796Test.cs" />
@@ -212,6 +214,7 @@
     <Compile Include="src\crypto\test\NullTest.cs" />
     <Compile Include="src\crypto\test\OAEPTest.cs" />
     <Compile Include="src\crypto\test\OCBTest.cs" />
+    <Compile Include="src\crypto\test\OpenBsdBCryptTest.cs" />
     <Compile Include="src\crypto\test\PSSBlindTest.cs" />
     <Compile Include="src\crypto\test\PSSTest.cs" />
     <Compile Include="src\crypto\test\PaddingTest.cs" />
@@ -252,6 +255,7 @@
     <Compile Include="src\crypto\test\SM3DigestTest.cs" />
     <Compile Include="src\crypto\test\SkeinDigestTest.cs" />
     <Compile Include="src\crypto\test\SkeinMacTest.cs" />
+    <Compile Include="src\crypto\test\StreamCipherResetTest.cs" />
     <Compile Include="src\crypto\test\Threefish1024Test.cs" />
     <Compile Include="src\crypto\test\Threefish256Test.cs" />
     <Compile Include="src\crypto\test\Threefish512Test.cs" />

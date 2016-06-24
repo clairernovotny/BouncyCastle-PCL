@@ -369,17 +369,18 @@ namespace Org.BouncyCastle.Crypto.Tls
             case CipherSuite.TLS_PSK_DHE_WITH_AES_256_CCM_8:
 
             /*
-             * draft-agl-tls-chacha20poly1305-04
+             * draft-ietf-tls-chacha20-poly1305-04
              */
-            case CipherSuite.TLS_DHE_RSA_WITH_CHACHA20_POLY1305_SHA256:
+            case CipherSuite.DRAFT_TLS_DHE_PSK_WITH_CHACHA20_POLY1305_SHA256:
+            case CipherSuite.DRAFT_TLS_DHE_RSA_WITH_CHACHA20_POLY1305_SHA256:
 
             /*
-             * draft-josefsson-salsa20-tls-04
+             * draft-zauner-tls-aes-ocb-04
              */
-            case CipherSuite.TLS_DHE_PSK_WITH_ESTREAM_SALSA20_SHA1:
-            case CipherSuite.TLS_DHE_PSK_WITH_SALSA20_SHA1:
-            case CipherSuite.TLS_DHE_RSA_WITH_ESTREAM_SALSA20_SHA1:
-            case CipherSuite.TLS_DHE_RSA_WITH_SALSA20_SHA1:
+            case CipherSuite.DRAFT_TLS_DHE_RSA_WITH_AES_128_OCB:
+            case CipherSuite.DRAFT_TLS_DHE_RSA_WITH_AES_256_OCB:
+            case CipherSuite.DRAFT_TLS_DHE_PSK_WITH_AES_128_OCB:
+            case CipherSuite.DRAFT_TLS_DHE_PSK_WITH_AES_256_OCB:
 
                 return true;
 
@@ -390,7 +391,8 @@ namespace Org.BouncyCastle.Crypto.Tls
 
         public static bool AreCompatibleParameters(DHParameters a, DHParameters b)
         {
-            return a.P.Equals(b.P) && a.G.Equals(b.G);
+            return a.P.Equals(b.P) && a.G.Equals(b.G)
+                && (a.Q == null || b.Q == null || a.Q.Equals(b.Q));
         }
 
         public static byte[] CalculateDHBasicAgreement(DHPublicKeyParameters publicKey,

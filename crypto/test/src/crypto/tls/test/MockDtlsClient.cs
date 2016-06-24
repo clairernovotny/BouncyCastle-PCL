@@ -60,11 +60,7 @@ namespace Org.BouncyCastle.Crypto.Tls.Tests
         //    return Arrays.Concatenate(base.GetCipherSuites(),
         //        new int[]
         //        {
-        //            CipherSuite.TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256,
-        //            CipherSuite.TLS_ECDHE_RSA_WITH_ESTREAM_SALSA20_SHA1,
-        //            CipherSuite.TLS_ECDHE_RSA_WITH_SALSA20_SHA1,
-        //            CipherSuite.TLS_RSA_WITH_ESTREAM_SALSA20_SHA1,
-        //            CipherSuite.TLS_RSA_WITH_SALSA20_SHA1,
+        //            CipherSuite.DRAFT_TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256,
         //        });
         //}
 
@@ -78,6 +74,7 @@ namespace Org.BouncyCastle.Crypto.Tls.Tests
                  * NOTE: If you are copying test code, do not blindly set these extensions in your own client.
                  */
                 TlsExtensionsUtilities.AddMaxFragmentLengthExtension(clientExtensions, MaxFragmentLength.pow2_9);
+                TlsExtensionsUtilities.AddPaddingExtension(clientExtensions, mContext.SecureRandom.Next(16));
                 TlsExtensionsUtilities.AddTruncatedHMacExtension(clientExtensions);
             }
             return clientExtensions;
