@@ -6,7 +6,7 @@
     "NuSpec.ReferenceGenerator": "2.0.0-beta-bld14"
   },
   "frameworks": {
-    "netstandard1.3": {
+    "netstandard1.0": {
     }
   }
 }
