@@ -72,13 +72,6 @@
   <PropertyGroup>
     <SignAssembly>true</SignAssembly>
   </PropertyGroup>
-  <PropertyGroup>
-    <NuSpecTfm>netstandard1.0</NuSpecTfm>
-  </PropertyGroup>
-  <ItemGroup>
-    <!-- NuSpec file must be specified as name does not match dll name -->
-    <NuSpecFile Include="$(SolutionDir)Portable.BouncyCastle.nuspec" />
-  </ItemGroup>
   <ItemGroup>
     <Compile Include="src\**\*.cs" />
     <Compile Include="bzip2\**\*.cs" />

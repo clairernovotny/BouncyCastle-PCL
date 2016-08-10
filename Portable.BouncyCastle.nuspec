@@ -42,42 +42,13 @@
     <language>en-US</language>
     <tags>bouncycastle, cryptography, encryption, security, PCL, wp8, wpa81, coreclr, netstandard, dnx, uwp, sl5, monotouch, monoandroid, xamarin, xamarin.ios</tags>
     <dependencies>
-      <group targetFramework="portable-net45+win8+wpa81+wp8" />
       <group targetFramework="netstandard1.0">
-        <dependency id="System.Collections" version="4.0.11" />
-        <dependency id="System.Diagnostics.Debug" version="4.0.11" />
-        <dependency id="System.Globalization" version="4.0.11" />
-        <dependency id="System.IO" version="4.1.0" />
-        <dependency id="System.Linq" version="4.1.0" />
-        <dependency id="System.Reflection" version="4.1.0" />
-        <dependency id="System.Reflection.Extensions" version="4.0.1" />
-        <dependency id="System.Runtime" version="4.1.0" />
-        <dependency id="System.Runtime.Extensions" version="4.1.0" />
-        <dependency id="System.Text.Encoding" version="4.0.11" />
-        <dependency id="System.Threading" version="4.0.11" />
-        <dependency id="System.Threading.Tasks" version="4.0.11" />
-      </group>
-      <group targetFramework="netstandard1.3">
-        <dependency id="System.Collections" version="4.0.11" />
-        <dependency id="System.Diagnostics.Debug" version="4.0.11" />
-        <dependency id="System.Globalization" version="4.0.11" />
-        <dependency id="System.IO" version="4.1.0" />
-        <dependency id="System.IO.FileSystem" version="4.0.1" />
-        <dependency id="System.IO.FileSystem.Primitives" version="4.0.1" />
-        <dependency id="System.Linq" version="4.1.0" />
-        <dependency id="System.Reflection" version="4.1.0" />
-        <dependency id="System.Reflection.Extensions" version="4.0.1" />
-        <dependency id="System.Runtime" version="4.1.0" />
-        <dependency id="System.Runtime.Extensions" version="4.1.0" />
-        <dependency id="System.Text.Encoding" version="4.0.11" />
-        <dependency id="System.Threading" version="4.0.11" />
-        <dependency id="System.Threading.Tasks" version="4.0.11" />
-      </group>
+        <dependency id="NETStandard.Library" version="1.6.0" />
+      </group>      
     </dependencies>
   </metadata>
   <files>
     <file src="Crypto\Readme.html" target="Readme.html" />
-    <file src="Crypto\bin\pcl\Release\crypto.*" exclude="**\*.srcsrv" target="lib\portable-net4+sl5+wp8+win8+wpa81" />
     <file src="Crypto\bin\pcl2\Release\crypto.*" exclude="**\*.srcsrv" target="lib\netstandard1.0" />
     <file src="Crypto\bin\dotnet\Release\crypto.*" exclude="**\*.srcsrv" target="lib\netstandard1.3" />
   </files>
