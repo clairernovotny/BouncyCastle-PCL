@@ -9,14 +9,10 @@ assembly_info:
   patch: false
       
 before_build:
-  
-  - cmd: nuget restore BouncyCastle-PCL.sln
   - cmd: '.\packages\GitVersion.CommandLine\tools\GitVersion.exe /l console /output buildserver /updateAssemblyInfo'
   
-build:
-  verbosity: normal
-  parallel: true
-  project: BouncyCastle-PCL.sln
+build_script:
+  - cmd: dotnet build BouncyCastle-PCL.sln -c Release
   
 after_build:
   - cmd: '.\packages\gitlink\lib\net45\GitLink.exe . -f BouncyCastle-PCL.sln -u https://github.com/onovotny/BouncyCastle-PCL -s %APPVEYOR_REPO_COMMIT% -errorsaswarnings'  
