@@ -49,7 +49,6 @@
   </metadata>
   <files>
     <file src="Crypto\Readme.html" target="Readme.html" />
-    <file src="Crypto\bin\pcl2\Release\crypto.*" exclude="**\*.srcsrv" target="lib\netstandard1.0" />
-    <file src="Crypto\bin\dotnet\Release\crypto.*" exclude="**\*.srcsrv" target="lib\netstandard1.3" />
+    <file src="Crypto\src\bin\Release\**\*.*" exclude="**\*.srcsrv" target="lib\" />    
   </files>
 </package>
