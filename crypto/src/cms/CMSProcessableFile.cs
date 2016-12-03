@@ -1,4 +1,4 @@
-#if !PORTABLE || DOTNET
+#if !PORTABLE || NETSTANDARD1_3
 using System;
 using System.IO;
 
