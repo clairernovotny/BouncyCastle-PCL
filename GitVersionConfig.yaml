@@ -5,3 +5,7 @@ branches:
     mode: ContinuousDeployment    
     tag: beta
     increment: Inherit
+  netstandard:
+    mode: ContinuousDeployment    
+    tag: beta
+    increment: Inherit
