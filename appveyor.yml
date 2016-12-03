@@ -12,6 +12,7 @@ before_build:
   - cmd: '.\packages\GitVersion.CommandLine\tools\GitVersion.exe /l console /output buildserver /updateAssemblyInfo'
   
 build_script:
+  - cmd: dotnet restore BouncyCastle-PCL.sln
   - cmd: dotnet build BouncyCastle-PCL.sln -c Release
   
 after_build:
